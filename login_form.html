@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-image: url("ad2.jpg");
+            background-repeat: repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #eb4024;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #dbde3a;
+            background-color: #060866;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: #fff; max-width: 150px;">
+        <h1>Please Create an Account</h1>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <div style="background-color: #fff; max-width: 150px; position: fixed; bottom: 100px;">
+        <p>
+            Username and Password cannot contain any letters and must have a length shorter than 6 characters but greater than 1.
+        </p>
+    </div>
+
+    <div style="display: none; background-color: #fff; max-width: 300px; position: fixed; bottom: 50px;" id="error_box">
+        <p>Please Fix Input Error</p>
+    </div>
+
+    <div class="navbar">
+        <a href="empty_page.html">Help</a>
+        <a href="empty_page.html">Where</a>
+        <a href="empty_page.html">Mission</a>
+        <a href="empty_page.html">Store</a>
+        <a href="empty_page.html">Education</a>
+        <a href="empty_page.html">Search</a>
+        <a href="login_form.html">Considering</a>
+        <a href="citation_page.html">Citations</a>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            var checkForLetters = /[a-zA-Z]/g;
+
+            if (username.length > 5 || password.length > 5 || username.length <= 1 || password.length <= 1) {
+                var element = document.getElementById("error_box");
+                element.style.display = "block";
+            } else if(checkForLetters.test(username) || checkForLetters.test(password)) {
+                var element = document.getElementById("error_box");
+                element.style.display = "block";
+            } else {
+                window.location.href = "application.html";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <style>
+        body {
+            background-image: url("ad.jpg");
+            background-repeat: repeat;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end; /* Move the container to the far right */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 20px; /* Add margin to keep some space from the right edge */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .scrollable-container {
+            height: 1000vh; /* Extend the div to 100vh (10 viewport heights) */
+            overflow-y: auto; /* Enable vertical scrolling when content overflows */
+            scrollbar-width: thin; /* Make the scrollbar thinner (Firefox) */
+            scrollbar-color: #ccc #f5f5f5; /* Set scrollbar colors (Firefox) */
+            /* For Webkit (Chrome, Safari) */
+            scrollbar-width: thin;
+            scrollbar-color: #ccc transparent;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        select {
+            height: 40px;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        button[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .navbar {
+            background-color: #dbde3a;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #65ba9c;
+            background-color: #624391;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Job Application</h1>
+        <form id="application_form">
+            <input type="text" id="yog" name="yog" placeholder="Year of Graduation: M-M-D%D=YY">
+
+            <input type="text" id="middle" name="middle" placeholder="Middle Name">
+
+            <input type="text" id="fingers" name="fingers" placeholder="Number of Fingers">
+
+            <label for="job">Please choose your desired job</label>
+            <select id="job" name="job" size="16">
+                <option>Suburban Garden Gnome: {523465432}</option>
+                <option>Urban Garden Gnome: {34523456}</option>
+                <option>Rural Garden Gnome: {87656788}</option>
+                <option>International Garden Gnome: {56745674}</option>
+                <option>Suburban Lawn Flamingo: {234253453}</option>
+                <option>Urban Lawn Flamingo: {98764356}</option>
+                <option>Rural Lawn Flamingo: {94567034}</option>
+                <option>International Lawn Flamingo: {09874623}</option>
+                <option>Suburban Ground-Dwelling Hobbit: {23647352}</option>
+                <option>Urban Ground-Dwelling Hobbit: {96847398}</option>
+                <option>Rural Ground-Dwelling Hobbit: {214274856}</option>
+                <option>International Ground-Dwelling Hobbit: {86385749}</option>
+                <option>Suburban Mini-Windmill Inhabitant: {01928342}</option>
+                <option>Urban Mini-Windmill Inhabitant: {75648376}</option>
+                <option>Rural Mini-Windmill Inhabitant: {64536354}</option>
+                <option>International Mini-Windmill Inhabitant: {17654264}</option>
+                <option></option>
+            </select>
+
+            <input type="text" id="email" name="email" placeholder="Email">
+
+            <input type="text" id="clothing_brand" name="clothing_brand" placeholder="Favorite Clothing Brand">
+
+            <input type="text" id="dad_first" name="dad_first" placeholder="Dad's First Name">
+
+            <input type="text" id="ssn" name="ssn" placeholder="SSN: X=XX,XXXXX-X">
+
+            <input type="text" id="high_school" name="high_school" placeholder="High School">
+
+            <input type="text" id="workplace_1" name="workplace_1" placeholder="Company 1 Name">
+
+            <input type="text" id="jobtitle_2" name="jobtitle_2" placeholder="Job Title 2">
+
+            <input type="text" id="yearsworked_1" name="yearsworked_1" placeholder="Years Worked 1">
+
+            <input type="text" id="sport_name" name="sport_name" placeholder="Favorite Sport">
+
+            <input type="text" id="yearsworked_2" name="yearsworked_2" placeholder="Years Worked 2">
+
+            <input type="text" id="mom_phone" name="mom_phone" placeholder="Mother's Phone #">
+
+            <input type="text" id="workplace_2" name="workplace_2" placeholder="Company 2 Name">
+
+            <label for="wingspan">Wingspan in Light-Years</label>
+            <input type="text" id="wingspan" name="wingspan" placeholder="Wingspan in Light-Years">
+
+            <input type="text" id="bossname_2" name="bossname_2" placeholder="Boss' Name 2">
+
+            <textarea id="jobdesc_2" name="jobdesc_2" placeholder="Job 2 Description:"></textarea>
+
+            <input type="text" id="jobtitle_1" name="jobtitle_1" placeholder="Job Title 1">
+
+            <input type="text" id="name" name="name" placeholder="Name">
+
+            <input type="text" id="jobtitle_3" name="jobtitle_3" placeholder="Job Title 3">
+
+            <input type="text" id="mom_maiden" name="mom_maiden" placeholder="Mother's Maiden Name">
+
+            <input type="text" id="toes" name="toes" placeholder="Number of Toes">
+
+            <input type="text" id="mom_first" name="mom_first" placeholder="Mother's First Name">
+
+            <input type="text" id="bossname_3" name="bossname_3" placeholder="Boss' Name 3">
+
+            <textarea id="jobdesc_1" name="jobdesc_1" placeholder="Job 1 Description:"></textarea>
+
+            <input type="text" id="mom_email" name="mom_email" placeholder="Mother's Email">
+
+            <input type="text" id="workplace_3" name="workplace_3" placeholder="Company 3 Name">
+
+            <input type="text" id="dad_phone" name="dad_phone" placeholder="Dad's Phone #">
+
+            <textarea id="nose" name="nose" placeholder="Please Describe the Shape of Your Nose"></textarea>
+
+            <input type="text" id="phone" name="phone" placeholder="Phone Number: (xxx)++(x)(xx)=(x-xxx)">
+
+            <input type="text" id="yearsworked_3" name="yearsworked_3" placeholder="Years Worked 3">
+
+            <textarea id="sport_why" name="sport_why" placeholder="Why Favorite Sport"></textarea>
+
+            <input type="text" id="food_name" name="food_name" placeholder="Favorite Food">
+
+            <label for="height">Height in Beard-Seconds</label>
+            <input type="text" id="height" name="height">
+
+            <input type="text" id="bossname_1" name="bossname_1" placeholder="Boss' Name 1">
+
+            <input type="text" id="dad_email" name="dad_email" placeholder="Dad's Email">
+
+            <textarea id="jobdesc_3" name="jobdesc_3" placeholder="Job 3 Description:"></textarea>
+
+            <input type="text" id="shorts_size" name="shorts_size" placeholder="Shorts Size (US)">
+
+            <label for="foot">Foot Length in Cubits</label>
+            <input type="text" id="foot" name="foot">
+
+            <input type="text" id="shirt_size" name="shirt_size" placeholder="Shirt Size (EU)">
+
+            <label for="experience">Years of Birth:</label>
+            <select id="experience" name="experience">
+                <option>Select</option>
+                <option value="1900-1950">1900-1950</option>
+                <option value="1951-2006">1951-2006</option>
+                <option value="2007-2012">2007-2012</option>
+                <option value="2013+">2013+</option>
+            </select>
+
+            <textarea id="food_why" name="food_why" placeholder="Why Favorite Food"></textarea>
+
+            <input type="text" id="job_num" name="job_num" placeholder="Enter Desired Job #">
+
+            <textarea id="coverLetter" name="coverLetter" placeholder="Cover Letter:"></textarea>
+
+            <input type="submit" style="border-color: #ccc"></input>
+        </form>
+        <div>
+            <p>
+                Form Instructions:
+                1. Follow Placeholder Text Exactly
+                2. All letters must be uppercase
+                3. All of the letter "a" or "A" must be replaced with the number 4
+                4. If any fields are submitted empty, we will not consider you for a job
+            </p>
+        </div>
+        <div class="scrollable-container"></div>
+        <div style="display: none;" id="error_box">
+            <h1>Please fix form input errors.</h1>
+        </div>
+    </div>
+
+    <!-- Nav-bar code -->
+    <div class="navbar">
+        <a href="empty_page.html">Help</a>
+        <a href="empty_page.html">Where</a>
+        <a href="empty_page.html">Mission</a>
+        <a href="empty_page.html">Store</a>
+        <a href="empty_page.html">Education</a>
+        <a href="empty_page.html">Search</a>
+        <a href="login_form.html">Considering</a>
+        <a href="citation_page.html">Citations</a>
+    </div>
+
+    <script>
+        function containsLowercase(str) {
+            for (let i = 0; i < str.length; i++) {
+                if(/[a-z]/.test(str[i])) {
+                    return true;
+                }
+            }
+        }
+
+        function checkForAorLower() {
+            const application_form = document.getElementById('application_form');
+            const form_items = application_form.elements;
+
+            for (let i = 0; i < form_items.length; i++) {
+                const form_item = form_items[i];
+
+                if(((form_item.tagName === 'TEXTAREA') || (form_item.tagName === 'INPUT' && form_item.type === 'text'))) {
+                    if(form_item.value.includes('A')) {
+                        console.log("A detected");
+                        return true;
+                    }
+                    if(containsLowercase(form_item.value)) {
+                        console.log('Lowercase detected');
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        function clearInputs() {
+            const application_form = document.getElementById('application_form');
+            const form_items = application_form.elements;
+
+            for (let i = 0; i < form_items.length; i++) {
+                const form_item = form_items[i];
+
+                if(((form_item.tagName === 'TEXTAREA') || (form_item.tagName === 'INPUT' && form_item.type === 'text'))) {
+                    form_item.value = "";
+                }
+            }
+        }
+
+        document.getElementById("application_form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            var ssn = document.getElementById("ssn").value;
+            const ssn_pattern = /^\d=\d{2},\d{5}-\d$/;
+
+            var yog = document.getElementById("yog").value;
+            const yog_pattern = /^\d-\d-\d%\d=\d{2}$/;
+
+            var phone = document.getElementById("phone").value;
+            const phone_pattern = /^\(\d{3}\)\+\+\(\d\)\(\d{2}\)=\(\d-\d{3}\)$/
+
+            if(checkForAorLower() || !ssn_pattern.test(ssn) || !yog_pattern.test(yog) || !phone_pattern.test(phone)) {
+                console.log("failing here1");
+                var element = document.getElementById("error_box");
+                element.style.display = "block";
+                clearInputs();
+            } else {
+                window.location.href = "index.html";
+            }
+
+        });
+    </script>
+</body>
+</html>
